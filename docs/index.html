@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSStripper! A bookmarklet to remove all CSS from the DOM</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 aria-label="CSS stripper">CSStripper!</h1>
+    <p>To use, drag the link below to your bookmarks bar and click!</p>
+    <p>
+      <a
+        href="javascript:!(function(){const e=document.getElementsByTagName('*');for(let t of e)t.removeAttribute('style'),'style'===t.localName&&t.remove();for(i=0;i<document.styleSheets.length;i++)document.styleSheets.item(i).disabled=!0}());"
+        aria-label="CSS stripper bookmarklet"
+        >CSStripper!</a
+      >
+    </p>
+    <p>
+      This won't remove any CSS that's added to the DOM after the bookmark has
+      been clicked.
+    </p>
+
+    <p>
+      <a href="https://github.com/wa-rren-dev/csstripper"
+        >See source on Github</a
+      >
+    </p>
+  </body>
+</html>
